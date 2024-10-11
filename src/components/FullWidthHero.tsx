@@ -47,7 +47,7 @@ export const FullWidthHero: FunctionComponent<{
             </BreadcrumbList>
           </Breadcrumb>
         )}
-        <div className="prose lg:prose-lg text-balance mt-16 mx-auto text-center">
+        <div className="prose lg:prose-lg text-balance mt-24 mx-auto text-center">
           <h1>{title}</h1>
         </div>
         <div className="my-6 text-lg text-center">{description}</div>

@@ -4,7 +4,7 @@ TODO
 - [ ] RSS
 - [ ] Structured data
 - [ ] Opengraph image 
-- [ ] Tag list page
+- [X] Tag list page
 - [ ] Featured list page
 - [ ] Optional header bar
 - [ ] Sitemap

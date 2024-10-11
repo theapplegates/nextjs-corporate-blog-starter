@@ -18,6 +18,7 @@ const categories: Category[] = [
 ];
 
 export const config = {
+  baseUrl: "http://localhost:3000",
   title: "Wisp CMS",
   description: "Building the cloudless future of the web",
   categories,

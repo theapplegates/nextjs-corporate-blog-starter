@@ -1,7 +1,7 @@
 TODO
 - [X] Placeholder image for blog listing & related posts
 - [X] Date formatting on home
-- [ ] RSS
+- [X] RSS
 - [ ] Structured data
 - [ ] Opengraph image 
 - [X] Tag list page

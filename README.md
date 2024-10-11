@@ -5,9 +5,8 @@ TODO
 - [X] Structured data
 - [ ] Opengraph image 
 - [X] Tag list page
-- [ ] Featured list page
 - [ ] Optional header bar
-- [ ] Sitemap
+- [X] Sitemap
 - [ ] Mobile TOC
 - [ ] Mobile design
 - [ ] Variable design for header

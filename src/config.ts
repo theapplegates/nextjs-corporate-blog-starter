@@ -1,3 +1,4 @@
+import urlJoin from "url-join";
 interface Category {
   label: string;
   tag: string;
@@ -17,8 +18,12 @@ const categories: Category[] = [
   },
 ];
 
+const baseUrl = "http://localhost:3000";
+
 export const config = {
-  baseUrl: "http://localhost:3000",
+  baseUrl,
+  logoUrl: urlJoin(baseUrl, "logo.png"),
+  organization: "Wisp",
   title: "Wisp CMS",
   description: "Building the cloudless future of the web",
   categories,

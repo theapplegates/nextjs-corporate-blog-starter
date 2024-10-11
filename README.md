@@ -2,7 +2,7 @@ TODO
 - [X] Placeholder image for blog listing & related posts
 - [X] Date formatting on home
 - [X] RSS
-- [ ] Structured data
+- [X] Structured data
 - [ ] Opengraph image 
 - [X] Tag list page
 - [ ] Featured list page
@@ -11,6 +11,14 @@ TODO
 - [ ] Mobile TOC
 - [ ] Mobile design
 - [ ] Variable design for header
+- [ ] Copyright
+
+
+## Customization
+
+- config
+- logo & favicon
+- default placeholder image
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 

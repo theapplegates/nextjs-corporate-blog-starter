@@ -23,12 +23,12 @@ const constructPath = ({
   if (page) searchParams.append("page", page);
   if (query) searchParams.append("query", query);
   tags?.forEach((tag) => searchParams.append("tags", tag));
-  return `${basePath}${page}?${searchParams.toString()}`;
+  return `${basePath}?${searchParams.toString()}`;
 };
 
 export const PostPagination = ({
   pagination,
-  basePath = "/blog?page=",
+  basePath = "/",
   query,
   tags,
   numSiblingPages = 2,

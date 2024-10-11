@@ -12,8 +12,8 @@ const categories: Category[] = [
   },
   {
     label: "Growth Hacking",
-    tag: "growth-hacking",
-    description: "Lessons on leveraging content marketing to grow businesses",
+    tag: "growth",
+    description: "Growth strategies for startups and established businesses",
   },
 ];
 

@@ -1,13 +1,12 @@
 "use client";
 
-import { FunctionComponent } from "react";
-import { config } from "../config";
-import { cn } from "../lib/utils";
 import { Search, X } from "lucide-react";
-import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import type { KeyboardEvent } from "react";
 import { useEffect, useRef, useState } from "react";
+import { config } from "../config";
+import { cn } from "../lib/utils";
+import Link from "next/link";
 
 const categories = [{ label: "Latest", tag: "latest" }, ...config.categories];
 
@@ -79,16 +78,22 @@ export const FilterBar = ({ className, active }: BlogNavigationBarProps) => {
         <div className="flex w-full items-center justify-between">
           <div className="flex gap-2">
             {categories.map((category) => (
-              <div
+              <Link
+                href={
+                  category.tag === "latest" ? `/` : `/category/${category.tag}`
+                }
                 key={category.tag}
-                className={cn(
-                  "border py-1 px-2",
-                  active === category.tag &&
-                    "text-primary-foreground bg-primary"
-                )}
               >
-                {category.label}
-              </div>
+                <button
+                  className={cn(
+                    "py-1 px-2",
+                    active === category.tag &&
+                      "border-b-2 border-black font-semibold"
+                  )}
+                >
+                  {category.label}
+                </button>
+              </Link>
             ))}
           </div>
           <div className="flex-shrink-0">

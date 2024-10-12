@@ -1,6 +1,6 @@
 import { wisp } from "@/lib/wisp";
 import Link from "next/link";
-import { FullWidthHero } from "../../components/FullWidthHero";
+import { FullWidthHeader } from "../../components/FullWidthHeader";
 import { Metadata } from "next";
 import { config } from "@/config";
 import { getOgImageUrl } from "@/lib/ogImage";
@@ -20,7 +20,7 @@ export default async function Page() {
 
   return (
     <>
-      <FullWidthHero
+      <FullWidthHeader
         title="Categories"
         description="Browse blog posts by category"
         breadcrumb={[

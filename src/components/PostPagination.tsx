@@ -7,22 +7,20 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import { cn } from "@/lib/utils";
 
 const constructPath = ({
   basePath,
   page,
   query,
-  tags,
 }: {
   basePath: string;
   page?: string;
   query?: string;
-  tags?: string[];
 }) => {
   const searchParams = new URLSearchParams();
   if (page) searchParams.append("page", page);
   if (query) searchParams.append("query", query);
-  tags?.forEach((tag) => searchParams.append("tags", tag));
   return `${basePath}?${searchParams.toString()}`;
 };
 
@@ -30,14 +28,12 @@ export const PostPagination = ({
   pagination,
   basePath = "/",
   query,
-  tags,
   numSiblingPages = 2,
   className,
 }: {
   className?: string;
   basePath?: string;
   query?: string;
-  tags?: string[];
   numSiblingPages?: number;
   pagination: {
     page: number;
@@ -48,9 +44,9 @@ export const PostPagination = ({
   };
 }) => {
   const buildPath = (page: number) =>
-    constructPath({ basePath, page: page.toString(), query, tags });
+    constructPath({ basePath, page: page.toString(), query });
   return (
-    <Pagination className={className}>
+    <Pagination className={cn("overflow-x-auto", className)}>
       <PaginationContent>
         {pagination.prevPage && (
           <PaginationItem>

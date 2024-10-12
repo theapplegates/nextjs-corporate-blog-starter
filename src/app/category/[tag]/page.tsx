@@ -2,7 +2,7 @@ import { BlogPostList } from "@/components/BlogPostList";
 import { PostPagination } from "@/components/PostPagination";
 import { wisp } from "@/lib/wisp";
 import { FilterBar } from "../../../components/FilterBar";
-import { FullWidthHero } from "../../../components/FullWidthHero";
+import { FullWidthHeader } from "../../../components/FullWidthHeader";
 import { config } from "../../../config";
 import { Metadata } from "next";
 import { getOgImageUrl } from "@/lib/ogImage";
@@ -45,7 +45,7 @@ export default async function Page({
 
   return (
     <>
-      <FullWidthHero
+      <FullWidthHeader
         title={label}
         description={description}
         breadcrumb={[
@@ -61,6 +61,7 @@ export default async function Page({
           pagination={result.pagination}
           className="my-16"
           query={searchParams?.query}
+          basePath={`/category/${tag}`}
         />
       </div>
     </>

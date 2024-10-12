@@ -5,11 +5,10 @@ TODO
 - [X] Structured data
 - [X] Opengraph image 
 - [X] Tag list page
-- [ ] Optional header bar
 - [X] Sitemap
 - [X] Mobile TOC
 - [X] Mobile design
-- [ ] Variable design for header
+- [X] Variable design selector for header
 - [X] Copyright
 
 

@@ -4,7 +4,7 @@ import { getOgImageUrl } from "@/lib/ogImage";
 import { wisp } from "@/lib/wisp";
 import { Metadata } from "next";
 import { FilterBar } from "../components/FilterBar";
-import { FullWidthHero } from "../components/FullWidthHero";
+import { FullWidthHeader } from "../components/FullWidthHeader";
 import { config } from "../config";
 
 const { title, description } = config;
@@ -33,7 +33,7 @@ export default async function Page({
 
   return (
     <>
-      <FullWidthHero title={title} description={description} />
+      <FullWidthHeader title={title} description={description} />
       <div className="container mx-auto">
         <FilterBar active="latest" className="my-8" />
         <BlogPostList posts={result.posts} />

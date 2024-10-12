@@ -8,7 +8,7 @@ import {
 import { Author, GetRelatedPostsResult, TagInPost } from "@wisp-cms/client";
 import Image from "next/image";
 import Link from "next/link";
-import { FullWidthHero } from "./FullWidthHero";
+import { FullWidthHeader } from "./FullWidthHeader";
 import { RelatedPosts } from "./RelatedPosts";
 import { processTableOfContents, TableOfContents } from "./TOC";
 
@@ -43,7 +43,7 @@ export const BlogContent = ({
   });
   return (
     <>
-      <FullWidthHero
+      <FullWidthHeader
         title={title}
         description=""
         breadcrumb={[

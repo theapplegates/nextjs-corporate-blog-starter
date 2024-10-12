@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -14,7 +16,7 @@ interface BreadcrumbProps {
   href: string;
 }
 
-export const FullWidthHero: FunctionComponent<{
+export const FullWidthHeader: FunctionComponent<{
   title: string;
   description: string;
   breadcrumb?: BreadcrumbProps[];
@@ -24,7 +26,7 @@ export const FullWidthHero: FunctionComponent<{
     <div
       className={cn(
         "pb-8 lg:pb-16 pt-4",
-        className, // Replace className with additional styling ie "bg-gradient-to-r from-teal-50 to-blue-50"
+        className // Replace className with additional styling ie "bg-gradient-to-r from-teal-50 to-blue-50"
       )}
     >
       <div className="container mx-auto px-4">
@@ -35,9 +37,14 @@ export const FullWidthHero: FunctionComponent<{
                 <React.Fragment key={index}>
                   <BreadcrumbItem className="text-inherit">
                     {index === breadcrumb.length - 1 ? (
-                      <BreadcrumbPage className="text-inherit line-clamp-1">{crumb.label}</BreadcrumbPage>
+                      <BreadcrumbPage className="text-inherit line-clamp-1">
+                        {crumb.label}
+                      </BreadcrumbPage>
                     ) : (
-                      <BreadcrumbLink className="text-inherit opacity-60 line-clamp-1" href={crumb.href}>
+                      <BreadcrumbLink
+                        className="text-inherit opacity-60 line-clamp-1"
+                        href={crumb.href}
+                      >
                         {crumb.label}
                       </BreadcrumbLink>
                     )}

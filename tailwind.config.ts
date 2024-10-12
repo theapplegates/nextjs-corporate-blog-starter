@@ -85,5 +85,14 @@ const config: Config = {
   	}
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+
+  // Conditionally add safelist configuration for development environment only
+  ...(process.env.NODE_ENV === 'development' ? {
+    safelist: [
+      {
+        pattern: /(from|to)-\w+-([1-9]00|50)/,
+      },
+    ],
+  } : {}),
 };
 export default config;

@@ -76,7 +76,7 @@ export const FilterBar = ({ className, active }: BlogNavigationBarProps) => {
         </div>
       ) : (
         <div className="flex w-full items-center justify-between">
-          <div className="flex gap-2">
+          <div className="flex gap-2 whitespace-nowrap  overflow-x-auto">
             {categories.map((category) => (
               <Link
                 href={

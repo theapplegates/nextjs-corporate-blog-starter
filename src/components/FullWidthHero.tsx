@@ -18,25 +18,26 @@ export const FullWidthHero: FunctionComponent<{
   title: string;
   description: string;
   breadcrumb?: BreadcrumbProps[];
-}> = ({ title, description, breadcrumb }) => {
+  className?: string;
+}> = ({ title, description, breadcrumb, className }) => {
   return (
     <div
       className={cn(
-        "pb-8 lg:pb-16 px-4",
-        breadcrumb ? "pt-0 lg:pt-8" : "pt-0 lg:pt-16",
+        "pb-8 lg:pb-16 pt-4",
+        className, // Replace className with additional styling ie "bg-gradient-to-r from-teal-50 to-blue-50"
       )}
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         {breadcrumb && (
-          <Breadcrumb className="mt-8">
-            <BreadcrumbList>
+          <Breadcrumb className="mt-8 text-inherit">
+            <BreadcrumbList className="text-inherit">
               {breadcrumb?.map((crumb, index) => (
                 <React.Fragment key={index}>
-                  <BreadcrumbItem>
+                  <BreadcrumbItem className="text-inherit">
                     {index === breadcrumb.length - 1 ? (
-                      <BreadcrumbPage>{crumb.label}</BreadcrumbPage>
+                      <BreadcrumbPage className="text-inherit line-clamp-1">{crumb.label}</BreadcrumbPage>
                     ) : (
-                      <BreadcrumbLink href={crumb.href}>
+                      <BreadcrumbLink className="text-inherit opacity-60 line-clamp-1" href={crumb.href}>
                         {crumb.label}
                       </BreadcrumbLink>
                     )}
@@ -47,8 +48,13 @@ export const FullWidthHero: FunctionComponent<{
             </BreadcrumbList>
           </Breadcrumb>
         )}
-        <div className="prose lg:prose-lg text-balance mt-24 mx-auto text-center">
-          <h1>{title}</h1>
+        <div
+          className={cn(
+            "prose lg:prose-lg text-balance mx-auto text-center px-4 text-inherit",
+            breadcrumb ? "pt-16 lg:pt-18" : "pt-16 lg:pt-28"
+          )}
+        >
+          <h1 className="text-inherit">{title}</h1>
         </div>
         <div className="my-6 text-lg text-center">{description}</div>
       </div>

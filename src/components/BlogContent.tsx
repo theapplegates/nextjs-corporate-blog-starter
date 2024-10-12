@@ -45,7 +45,7 @@ export const BlogContent = ({
           { label: title, href: "" },
         ]}
       />
-      <div className="container mx-auto mt-8">
+      <div className="container mx-auto mt-8 px-4">
         <div className="flex items-center gap-2">
           <Image
             src={author.image || ""}
@@ -61,14 +61,14 @@ export const BlogContent = ({
           </div>
         </div>
         <div className="flex">
-          <div className="w-3/4 prose prose-lg max-w-none">
+          <div className="lg:w-3/4 prose prose-lg max-w-none w-full">
             <div
               dangerouslySetInnerHTML={{
                 __html: modifiedHtml,
               }}
             />
           </div>
-          <div className="w-1/4">
+          <div className="w-1/4 hidden lg:block">
             <div className="sticky top-0 mt-4 p-4 max-h-screen overflow-y-auto">
               <div className="text-lg font-semibold">Table of Contents</div>
               <TableOfContents items={tableOfContents} />

@@ -4,7 +4,7 @@ import type { GetPostsResult } from "@wisp-cms/client";
 
 export const BlogPostList = ({ posts }: { posts: GetPostsResult["posts"] }) => {
   return (
-    <div className="grid grid-cols-1 gap-16 md:grid-cols-2">
+    <div className="grid grid-cols-1 gap-16 md:grid-cols-2 px-4">
       {posts.map((post) => (
         <div className="break-words" key={post.id}>
           <Link href={`/post/${post.slug}`}>

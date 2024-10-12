@@ -3,12 +3,12 @@ TODO
 - [X] Date formatting on home
 - [X] RSS
 - [X] Structured data
-- [ ] Opengraph image 
+- [X] Opengraph image 
 - [X] Tag list page
 - [ ] Optional header bar
 - [X] Sitemap
 - [ ] Mobile TOC
-- [ ] Mobile design
+- [X] Mobile design
 - [ ] Variable design for header
 - [ ] Copyright
 

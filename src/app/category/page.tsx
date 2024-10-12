@@ -28,7 +28,7 @@ export default async function Page() {
           { label: "Category", href: `/category/` },
         ]}
       />
-      <div className="container mx-auto text-xl">
+      <div className="container mx-auto text-xl px-4 mb-10">
         {result.tags.map((tag) => (
           <Link key={tag.id} href={`/category/${tag.name}`}>
             <div className="inline-block mr-4 mt-2">#{tag.name}</div>

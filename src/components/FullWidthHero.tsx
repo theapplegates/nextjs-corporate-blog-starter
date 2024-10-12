@@ -22,8 +22,8 @@ export const FullWidthHero: FunctionComponent<{
   return (
     <div
       className={cn(
-        "pb-16",
-        breadcrumb ? "pt-8" : "pt-16",
+        "pb-8 lg:pb-16 px-4",
+        breadcrumb ? "pt-0 lg:pt-8" : "pt-0 lg:pt-16",
       )}
     >
       <div className="container mx-auto">

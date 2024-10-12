@@ -57,7 +57,7 @@ export const FilterBar = ({ className, active }: BlogNavigationBarProps) => {
   };
 
   return (
-    <div className={cn("flex items-center justify-between", className)}>
+    <div className={cn("flex items-center justify-between px-4", className)}>
       {isSearchActive ? (
         <div className="flex w-full items-center justify-between rounded-sm border px-1">
           <input

@@ -1,11 +1,35 @@
+import type { Metadata } from "next";
 import { wisp } from "@/lib/wisp";
 import { BlogContent } from "@/components/BlogContent";
 import type { BlogPosting, WithContext } from "schema-dts";
 import { config } from "@/config";
+import { getOgImageUrl } from "@/lib/ogImage";
 
 interface Params {
   slug: string;
 }
+export async function generateMetadata({
+  params: { slug },
+}: {
+  params: Params;
+}): Promise<Metadata> {
+  const result = await wisp.getPost(slug);
+  if (!result.post) {
+    return {
+      title: "Page not found!",
+    };
+  }
+  return {
+    title: result.post.title,
+    description: result.post.description,
+    openGraph: {
+      title: result.post.title,
+      description: result.post.description ?? "",
+      images: [result.post.image || getOgImageUrl(result.post.title)],
+    },
+  };
+}
+
 export default async function BlogPost({
   params: { slug },
 }: {

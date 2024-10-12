@@ -1,11 +1,23 @@
 import { BlogPostList } from "@/components/BlogPostList";
 import { PostPagination } from "@/components/PostPagination";
+import { getOgImageUrl } from "@/lib/ogImage";
 import { wisp } from "@/lib/wisp";
+import { Metadata } from "next";
 import { FilterBar } from "../components/FilterBar";
 import { FullWidthHero } from "../components/FullWidthHero";
 import { config } from "../config";
 
 const { title, description } = config;
+
+export const metadata: Metadata = {
+  title: `${title} - Blog`,
+  description,
+  openGraph: {
+    title: `${title} - Blog`,
+    description,
+    images: [getOgImageUrl(title)],
+  },
+};
 
 export default async function Page({
   searchParams,

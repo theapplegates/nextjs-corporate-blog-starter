@@ -4,6 +4,24 @@ import { wisp } from "@/lib/wisp";
 import { FilterBar } from "../../../components/FilterBar";
 import { FullWidthHero } from "../../../components/FullWidthHero";
 import { config } from "../../../config";
+import { Metadata } from "next";
+import { getOgImageUrl } from "@/lib/ogImage";
+
+export async function generateMetadata({
+  params: { tag },
+}: {
+  params: { tag: string };
+}): Promise<Metadata> {
+  return {
+    title: `Blog posts tagged with #${tag}`,
+    description: `List of all blog posts on ${config.organization} tagged with #${tag}`,
+    openGraph: {
+      title: `Blog posts tagged with #${tag}`,
+      description: `List of all blog posts on ${config.organization} tagged with #${tag}`,
+      images: [getOgImageUrl(`#${tag}`)],
+    },
+  };
+}
 
 export default async function Page({
   searchParams,

@@ -7,10 +7,10 @@ TODO
 - [X] Tag list page
 - [ ] Optional header bar
 - [X] Sitemap
-- [ ] Mobile TOC
+- [X] Mobile TOC
 - [X] Mobile design
 - [ ] Variable design for header
-- [ ] Copyright
+- [X] Copyright
 
 
 ## Customization

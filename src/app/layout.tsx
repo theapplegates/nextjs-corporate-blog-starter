@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
+import { Footer } from "@/components/Footer";
 
 const fontSans = IBM_Plex_Sans({
   subsets: ["latin"],
@@ -20,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${fontSans.variable} antialiased font-sans`}>{children}</body>
+      <body className={`${fontSans.variable} antialiased font-sans`}>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

@@ -1,4 +1,10 @@
 "use client";
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Author, GetRelatedPostsResult, TagInPost } from "@wisp-cms/client";
 import Image from "next/image";
 import Link from "next/link";
@@ -61,7 +67,19 @@ export const BlogContent = ({
           </div>
         </div>
         <div className="flex">
-          <div className="lg:w-3/4 prose prose-lg max-w-none w-full">
+          <div className="lg:w-3/4 prose prose-lg max-w-none w-full break-words">
+            <Accordion
+              type="single"
+              collapsible
+              className="w-full not-prose my-6 block lg:hidden"
+            >
+              <AccordionItem value="toc" className="border-none">
+                <AccordionTrigger>Table of Content</AccordionTrigger>
+                <AccordionContent>
+                  <TableOfContents items={tableOfContents} />
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
             <div
               dangerouslySetInnerHTML={{
                 __html: modifiedHtml,

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { GetPostsResult } from "@wisp-cms/client";
+import { formatFullDate } from "@/lib/date";
 
 export const BlogPostList = ({ posts }: { posts: GetPostsResult["posts"] }) => {
   return (
@@ -38,9 +39,7 @@ export const BlogPostList = ({ posts }: { posts: GetPostsResult["posts"] }) => {
               />
               <div className="font-medium">
                 {post.author.name} | Published on{" "}
-                {new Date(
-                  post.publishedAt || post.updatedAt
-                )?.toLocaleDateString()}
+                {formatFullDate(post.publishedAt || post.createdAt)}
               </div>
             </div>
           </div>

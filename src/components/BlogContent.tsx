@@ -1,9 +1,9 @@
 "use client";
 import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Author, GetRelatedPostsResult, TagInPost } from "@wisp-cms/client";
 import Image from "next/image";
@@ -11,6 +11,9 @@ import Link from "next/link";
 import { FullWidthHeader } from "./FullWidthHeader";
 import { RelatedPosts } from "./RelatedPosts";
 import { processTableOfContents, TableOfContents } from "./TOC";
+import { ContentWithCustomComponents } from "@wisp-cms/react-custom-component";
+import { FAQ } from "./WispComponents/FAQ";
+import { formatFullDate } from "@/lib/date";
 
 export const BlogContent = ({
   post: { title, content, author, publishedAt, tags },
@@ -62,8 +65,7 @@ export const BlogContent = ({
           />
           <div className="font-medium">{author.name}</div> |
           <div>
-            Published on{" "}
-            {publishedAt ? new Date(publishedAt).toLocaleDateString() : "N/A"}
+            Published on {publishedAt ? formatFullDate(publishedAt) : "N/A"}
           </div>
         </div>
         <div className="flex">
@@ -80,9 +82,10 @@ export const BlogContent = ({
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: modifiedHtml,
+            <ContentWithCustomComponents
+              content={modifiedHtml}
+              customComponents={{
+                FAQ,
               }}
             />
           </div>

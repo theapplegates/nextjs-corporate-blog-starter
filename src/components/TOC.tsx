@@ -2,6 +2,7 @@
 
 import React from "react";
 import slugify from "slugify";
+import { parse } from "node-html-parser";
 
 interface HeaderConfig {
   h1?: boolean;
@@ -27,16 +28,16 @@ export const processTableOfContents = (
   rawHtml: string,
   headerConfig: HeaderConfig
 ): ProcessedContent => {
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(rawHtml, "text/html");
-  const headers = doc.querySelectorAll("h1, h2, h3, h4, h5, h6");
+  // Using node-html-parser to parse the HTML
+  const root = parse(rawHtml);
+  const headers = root.querySelectorAll("h1, h2, h3, h4, h5, h6");
   const tableOfContents: TableOfContentsItem[] = [];
   const usedIds = new Set<string>();
 
   headers.forEach((header) => {
     const level = parseInt(header.tagName.charAt(1));
     if (headerConfig[`h${level}` as keyof HeaderConfig]) {
-      const text = header.textContent || "";
+      const text = header.rawText || ""; // Changed to rawText for node-html-parser
       const id = slugify(text, { lower: true, strict: true });
 
       // Ensure unique IDs
@@ -48,7 +49,7 @@ export const processTableOfContents = (
       }
       usedIds.add(uniqueId);
 
-      header.id = uniqueId;
+      header.setAttribute("id", uniqueId); // Changed to setAttribute for node-html-parser
       tableOfContents.push({
         id: uniqueId,
         text,
@@ -58,7 +59,7 @@ export const processTableOfContents = (
   });
 
   return {
-    modifiedHtml: doc.body.innerHTML,
+    modifiedHtml: root.toString(), // Changed to toString() for node-html-parser
     tableOfContents,
   };
 };

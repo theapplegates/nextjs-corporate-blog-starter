@@ -1,3 +1,4 @@
+import { config } from "@/config";
 import {
   buildWispClient,
   GetPostsResult,
@@ -5,7 +6,7 @@ import {
 } from "@wisp-cms/client";
 
 export const wisp = buildWispClient({
-  blogId: "cluqyx1rl0000l5ds3f0vkfer",
+  blogId: config.blogId,
 });
 
 export type { GetPostsResult, GetPostResult };

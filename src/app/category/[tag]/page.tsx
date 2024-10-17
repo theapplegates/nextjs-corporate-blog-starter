@@ -51,7 +51,7 @@ export default async function Page({
         title={label}
         description={description}
         breadcrumb={[
-          { label: "Blog", href: "/" },
+          { label: "Home", href: "/" },
           { label: "Category", href: `/category/` },
           { label, href: `/category/${tag}` },
         ]}

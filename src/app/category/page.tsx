@@ -26,7 +26,7 @@ export default async function Page() {
         title="Categories"
         description="Browse blog posts by category"
         breadcrumb={[
-          { label: "Blog", href: "/" },
+          { label: "Home", href: "/" },
           { label: "Category", href: `/category/` },
         ]}
       />

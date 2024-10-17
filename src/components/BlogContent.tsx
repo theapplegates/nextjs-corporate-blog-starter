@@ -54,7 +54,7 @@ export const BlogContent = ({
           { label: title, href: "" },
         ]}
       />
-      <div className="container mx-auto mt-8 px-4">
+      <div className="container mx-auto mt-8 px-4 max-w-6xl">
         <div className="flex items-center gap-2">
           <Image
             src={author.image || ""}
@@ -69,7 +69,7 @@ export const BlogContent = ({
           </div>
         </div>
         <div className="flex">
-          <div className="lg:w-3/4 prose prose-lg max-w-none w-full break-words">
+          <div className="lg:w-3/4 prose prose-lg max-w-none w-full break-words blog-content">
             <Accordion
               type="single"
               collapsible

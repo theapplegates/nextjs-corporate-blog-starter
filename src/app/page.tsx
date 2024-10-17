@@ -1,3 +1,5 @@
+export const revalidate = 60;
+
 import { BlogPostList } from "@/components/BlogPostList";
 import { PostPagination } from "@/components/PostPagination";
 import { getOgImageUrl } from "@/lib/ogImage";
@@ -34,7 +36,7 @@ export default async function Page({
   return (
     <>
       <FullWidthHeader title={title} description={description} />
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-6xl">
         <FilterBar active="latest" className="my-8" />
         <BlogPostList posts={result.posts} />
         <PostPagination

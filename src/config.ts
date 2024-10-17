@@ -7,14 +7,29 @@ interface Category {
 
 const categories: Category[] = [
   {
-    label: "Build In Public",
-    tag: "build-in-public",
-    description: "Lessons on leveraging content marketing to grow businesses",
+    label: "Foundation Model",
+    tag: "foundation-model",
+    description: "Insights on powerful AI models at the foundation of tech.",
   },
   {
-    label: "Growth Hacking",
-    tag: "growth",
-    description: "Growth strategies for startups and established businesses",
+    label: "Engineering",
+    tag: "engineering",
+    description: "Innovative engineering driving AI advancements.",
+  },
+  {
+    label: "Jobs",
+    tag: "jobs",
+    description: "Explore AI job trends and opportunities shaping a brighter future.",
+  },
+  {
+    label: "Startups",
+    tag: "startup",
+    description: "Spotlight on innovative AI startups transforming industries.",
+  },
+  {
+    label: "Ethics",
+    tag: "ethics",
+    description: "Promoting responsible AI for positive impact.",
   },
 ];
 

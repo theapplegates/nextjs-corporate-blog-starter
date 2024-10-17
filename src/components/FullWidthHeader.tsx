@@ -29,7 +29,7 @@ export const FullWidthHeader: FunctionComponent<{
         className // Replace className with additional styling ie "bg-gradient-to-r from-teal-50 to-blue-50"
       )}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 max-w-6xl">
         {breadcrumb && (
           <Breadcrumb className="mt-8 text-inherit">
             <BreadcrumbList className="text-inherit">
@@ -63,7 +63,7 @@ export const FullWidthHeader: FunctionComponent<{
         >
           <h1 className="text-inherit">{title}</h1>
         </div>
-        <div className="my-6 text-lg text-center">{description}</div>
+        <div className="my-6 text-lg text-center max-w-2xl mx-auto">{description}</div>
       </div>
     </div>
   );

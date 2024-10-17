@@ -1,3 +1,5 @@
+export const revalidate = 60;
+
 import { BlogPostList } from "@/components/BlogPostList";
 import { PostPagination } from "@/components/PostPagination";
 import { wisp } from "@/lib/wisp";
@@ -54,7 +56,7 @@ export default async function Page({
           { label, href: `/category/${tag}` },
         ]}
       />
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-6xl">
         <FilterBar active={tag} className="my-8" />
         <BlogPostList posts={result.posts} />
         <PostPagination

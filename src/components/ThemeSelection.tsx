@@ -198,15 +198,15 @@ export const ThemeSelection = () => {
         ]}
         className={gradient}
       />
-      <div className="container mx-auto px-4 my-8">
+      <div className="container mx-auto px-4 my-8 max-w-6xl">
         <div className="prose prose-lg">
           <p>
             Tailwind Class: <code>{gradient}</code>
           </p>
         </div>
       </div>
-      <div className="container mx-auto px-4 my-8 flex gap-4">
-        <div className="prose prose-lg max-w-none w-2/5">
+      <div className="container mx-auto px-4 my-8 flex gap-4 max-w-6xl">
+        <div className="prose prose-lg w-2/5">
           <h2>Instructions</h2>
           <p>
             This tool allows you to select some of the popular gradient or
@@ -218,7 +218,7 @@ export const ThemeSelection = () => {
             above and apply it to the <code>FullWidthHeader</code> component.
           </p>
         </div>
-        <div className="prose prose-lg max-w-none w-3/5">
+        <div className="prose prose-lg w-3/5">
           <h2>Light Gradients</h2>
           <div className="flex flex-wrap gap-2">
             {lightGradients.map((gradient) => (

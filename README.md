@@ -4,7 +4,7 @@
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FWisp-CMS%2Fnextjs-corporate-blog-starter&env=NEXT_PUBLIC_BLOG_ID,NEXT_PUBLIC_BASE_URL,NEXT_PUBLIC_BLOG_ORGANIZATION,NEXT_PUBLIC_BLOG_TITLE,NEXT_PUBLIC_BLOG_DESCRIPTION&demo-title=Demo%20Corporate%20Blog&demo-description=Next.js%20Blog%20Starter%20Kit%20with%20Tailwind%20%26%20Shadcn%20-%20Powered%20by%20Wisp&demo-url=https%3A%2F%2Fcorporate-blog-demo.wisp.blog%2F&demo-image=https%3A%2F%2Fimagedelivery.net%2FlLmNeOP7HXG0OqaG97wimw%2Fcm28hgkdk000wmu7nocgku1dl%2F5b9708ce-413d-4065-994e-af59bdef863d.png%2Fpublic)
 
-[View Demo Blog](https://corporate-blog-demo.wisp.blog/)
+[View Demo Blog](https://nextjs-corporate-blog-starter.vercel.app)
 
 ## The Corporate Blog Starter Template for Modern Companies & Publications
 

@@ -1,16 +1,17 @@
 # Wisp CMS Corporate Blog Template
 
-<!-- ![Wisp CMS Corporate Blog Template](insert_image_url_here) -->
+![Wisp CMS Corporate Blog Template](https://imagedelivery.net/lLmNeOP7HXG0OqaG97wimw/cm28hgkdk000wmu7nocgku1dl/5b9708ce-413d-4065-994e-af59bdef863d.png/public)
 
 <!-- [![Deploy with Vercel](https://vercel.com/button)](insert_vercel_deploy_url_here) -->
 
 ## The Corporate Blog Starter Template for Modern Companies & Publications
 
-Welcome to the Wisp CMS Corporate Blog Template – the most powerful and flexible solution for creating stunning corporate websites and news portals. Built on Next.js 14 and powered by Wisp CMS, this template offers an unparalleled combination of performance, SEO optimization, and user-friendly content management.
+Welcome to the Wisp CMS Corporate Blog Template – the most powerful and flexible solution for creating stunning corporate websites and news portals. Built on [Next.js 14](https://nextjs.org/docs/getting-started/installation), [Tailwind CSS](https://tailwindcss.com/), [Shadcn](https://ui.shadcn.com/) & [Wisp CMS](https://wisp.blog/?utm_source=github&utm_medium=web&utm_campaign=nextjs-corporate-blog-starter), this template offers an unparalleled combination of performance, SEO optimization, and user-friendly content management.
 
 ### Why Choose Wisp's Corporate Blog Template?
 
 - **Corporate-Focused Design**: Sleek, professional layout perfect for businesses and publications.
+- **Multi-Theme Support**: Choose between different styles to perfectly match your corporate branding.
 - **Advanced SEO Features**: Built-in SEO optimizations to ensure your content ranks high in search results.
 - **Dynamic Table of Contents**: Improve user navigation with an automatically generated table of contents for each article.
 - **Tabbed Category Navigation**: Intuitive top-level tabs for easy browsing through different categories of blog posts or articles.
@@ -19,7 +20,7 @@ Welcome to the Wisp CMS Corporate Blog Template – the most powerful and flexib
 - **Fast Performance**: Utilizing Next.js 14's server components for lightning-fast page loads.
 - **Seamless Integration with Wisp CMS**: Leverage the power of Wisp CMS for effortless content creation and management.
 
-## Powered by Wisp CMS
+## About Wisp
 
 Wisp is a modern CMS for adding blogs to websites. It features an intuitive, medium-like editorial experience so that you can focus on writing instead of getting distracted by markdown.
 
@@ -46,6 +47,14 @@ Wisp is a modern CMS for adding blogs to websites. It features an intuitive, med
 - [ESLint](https://eslint.org/) for static analysis
 - [TypeScript](https://www.typescriptlang.org/) for type safety
 - Font optimization with [next/font](https://nextjs.org/docs/app/api-reference/components/font)
+## Choose from Different Themes
+
+![Multiple themes](https://imagedelivery.net/lLmNeOP7HXG0OqaG97wimw/cm28hgkdk000wmu7nocgku1dl/61d58c4a-b9e8-438b-bf57-314a4bb350c2.png/public)
+
+The design is flexible, allowing you to choose from multiple themes to suit your brand. Head over to [https://corporate-blog-demo.wisp.blog/theme](https://corporate-blog-demo.wisp.blog/theme) to select preview a wide range of themes or generate your own.
+
+Simply copy the Tailwind Class onto the [FullWidthHeader Component](/src/components/FullWidthHeader.tsx) to apply the theme to the entire blog.
+
 
 ## Quick Start Guide
 

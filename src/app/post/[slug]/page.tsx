@@ -1,3 +1,5 @@
+export const revalidate = 60; // 1 minute'
+
 import type { Metadata } from "next";
 import { wisp } from "@/lib/wisp";
 import { BlogContent } from "@/components/BlogContent";

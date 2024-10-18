@@ -1,4 +1,4 @@
-export const revalidate = 3600;
+export const revalidate = 3600; // 1 hour
 
 import { NextResponse } from "next/server";
 import RSS from "rss";

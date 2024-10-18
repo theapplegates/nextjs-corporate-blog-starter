@@ -1,4 +1,4 @@
-export const revalidate = 60;
+export const revalidate = 60; // 1 minute
 
 import { BlogPostList } from "@/components/BlogPostList";
 import { PostPagination } from "@/components/PostPagination";

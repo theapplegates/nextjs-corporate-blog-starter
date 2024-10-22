@@ -1,4 +1,4 @@
-# Wisp CMS Corporate Blog Template
+# Wisp CMS Corporate Blog Template - Next.js 15
 
 ![Wisp CMS Corporate Blog Template](https://imagedelivery.net/lLmNeOP7HXG0OqaG97wimw/cm28hgkdk000wmu7nocgku1dl/5b9708ce-413d-4065-994e-af59bdef863d.png/public)
 
@@ -6,7 +6,7 @@
 
 [View Demo Blog](https://nextjs-corporate-blog-starter.vercel.app)
 
-## The Corporate Blog Starter Template for Modern Companies & Publications
+## Corporate Blog Starter Template for Modern Companies & Publications
 
 Welcome to the Wisp CMS Corporate Blog Template – the most powerful and flexible solution for creating stunning corporate websites and news portals. Built on [Next.js 14](https://nextjs.org/docs/getting-started/installation), [Tailwind CSS](https://tailwindcss.com/), [Shadcn](https://ui.shadcn.com/) & [Wisp CMS](https://wisp.blog/?utm_source=github&utm_medium=web&utm_campaign=nextjs-corporate-blog-starter), this template offers an unparalleled combination of performance, SEO optimization, and user-friendly content management.
 
@@ -42,7 +42,7 @@ Wisp is a modern CMS for adding blogs to websites. It features an intuitive, med
 
 ## Technologies
 
-- [Next.js 14](https://nextjs.org/) using App Router & TypeScript
+- [Next.js 15](https://nextjs.org/blog/next-15) using App Router, TypeScript & Turbopack
 - [Wisp](https://wisp.blog/?utm_source=github&utm_medium=web&utm_campaign=nextjs-blog-cms-wisp) to manage blog posts
 - [Tailwind CSS](https://tailwindcss.com/) for CSS framework
 - [Shadcn UI](https://ui.shadcn.com/) for UI components

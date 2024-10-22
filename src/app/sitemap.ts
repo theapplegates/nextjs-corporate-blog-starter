@@ -1,5 +1,5 @@
 export const dynamic = "force-dynamic";
-export const revalidate = 60 * 60; // 1 hour
+export const revalidate = 360; // 1 hour
 
 import type { MetadataRoute } from "next";
 import urlJoin from "url-join";

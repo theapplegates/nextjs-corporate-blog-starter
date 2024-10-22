@@ -21,11 +21,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function Page({
-  searchParams,
-}: {
-  searchParams?: { query: string; page: string };
-}) {
+export default async function Page(
+  props: {
+    searchParams?: Promise<{ query: string; page: string }>;
+  }
+) {
+  const searchParams = await props.searchParams;
   const page = searchParams?.page ? parseInt(searchParams.page) : 1;
   const result = await wisp.getPosts({
     limit: 6,

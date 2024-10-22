@@ -10,11 +10,17 @@ import { getOgImageUrl } from "@/lib/ogImage";
 interface Params {
   slug: string;
 }
-export async function generateMetadata({
-  params: { slug },
-}: {
-  params: Params;
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: {
+    params: Promise<Params>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
+
+  const {
+    slug
+  } = params;
+
   const result = await wisp.getPost(slug);
   if (!result.post) {
     return {
@@ -32,11 +38,17 @@ export async function generateMetadata({
   };
 }
 
-export default async function BlogPost({
-  params: { slug },
-}: {
-  params: Params;
-}) {
+export default async function BlogPost(
+  props: {
+    params: Promise<Params>;
+  }
+) {
+  const params = await props.params;
+
+  const {
+    slug
+  } = params;
+
   const [result, related] = await Promise.all([
     wisp.getPost(slug),
     wisp.getRelatedPosts({ slug, limit: 4 }),

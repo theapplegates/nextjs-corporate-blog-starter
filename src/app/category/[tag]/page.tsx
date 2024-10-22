@@ -9,11 +9,17 @@ import { config } from "../../../config";
 import { Metadata } from "next";
 import { getOgImageUrl } from "@/lib/ogImage";
 
-export async function generateMetadata({
-  params: { tag },
-}: {
-  params: { tag: string };
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ tag: string }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
+
+  const {
+    tag
+  } = params;
+
   return {
     title: `Blog posts tagged with #${tag}`,
     description: `List of all blog posts on ${config.organization} tagged with #${tag}`,
@@ -25,13 +31,19 @@ export async function generateMetadata({
   };
 }
 
-export default async function Page({
-  searchParams,
-  params: { tag },
-}: {
-  searchParams?: { query: string; page: string };
-  params: { tag: string };
-}) {
+export default async function Page(
+  props: {
+    searchParams?: Promise<{ query: string; page: string }>;
+    params: Promise<{ tag: string }>;
+  }
+) {
+  const params = await props.params;
+
+  const {
+    tag
+  } = params;
+
+  const searchParams = await props.searchParams;
   const category = config.categories.find((c) => c.tag === tag);
   const { label, description } = category || {
     label: `#${tag}`,

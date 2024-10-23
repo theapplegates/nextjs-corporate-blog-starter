@@ -18,7 +18,7 @@ export const BlogPostList = ({ posts }: { posts: GetPostsResult["posts"] }) => {
                   fill
                 />
               ) : (
-                <Image src="/placeholder.jpg" alt="placeholder" />
+                <Image src="/placeholder.jpg" alt="placeholder" fill />
               )}
             </div>
           </Link>

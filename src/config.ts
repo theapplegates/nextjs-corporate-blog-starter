@@ -36,13 +36,13 @@ const categories: Category[] = [
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
 export const config = {
-  blogId: process.env.NEXT_PUBLIC_BLOG_ID || "clvlugru90000o4g8ahxp069s",
+  blogId: process.env.NEXT_PUBLIC_BLOG_ID || "cm28hgkdk000wmu7nocgku1dl",
   baseUrl,
   logoUrl: urlJoin(baseUrl, "logo.png"),
-  organization: process.env.NEXT_PUBLIC_BLOG_ORGANIZATION || "Example Org",
-  title: process.env.NEXT_PUBLIC_BLOG_TITLE || "Launched",
+  organization: process.env.NEXT_PUBLIC_BLOG_ORGANIZATION || "The Applegates",
+  title: process.env.NEXT_PUBLIC_BLOG_TITLE || "Living Life",
   description:
     process.env.NEXT_PUBLIC_BLOG_DESCRIPTION ||
-    "Let's build something amazing!",
+    "Life, I write about it...",
   categories,
 };

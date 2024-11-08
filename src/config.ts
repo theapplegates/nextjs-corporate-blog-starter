@@ -33,7 +33,7 @@ const categories: Category[] = [
   },
 ];
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://nextjs15.paulapplegate.com";
 
 export const config = {
   blogId: process.env.NEXT_PUBLIC_BLOG_ID || "cm28hgkdk000wmu7nocgku1dl",
